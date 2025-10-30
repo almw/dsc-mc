@@ -1,0 +1,5 @@
+{
+  "Type": "Audit",
+  "Version": "1.0.0",
+  "configurationModeFrequencyMins": 180
+}

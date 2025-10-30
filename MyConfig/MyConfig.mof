@@ -1,0 +1,50 @@
+/*
+@TargetNode='localhost'
+@GeneratedBy=dkuff
+@GenerationDate=10/29/2025 19:12:24
+@GenerationHost=W0
+*/
+
+instance of MSFT_EnvironmentResource as $MSFT_EnvironmentResource1ref
+{
+Ensure = "Present";
+ ResourceID = "[Environment]MachineConfigurationExample";
+ ModuleVersion = "2.12.0.0";
+ Target = {
+    "Process",
+    "Machine"
+};
+ Value = "This was set by machine configuration";
+ ModuleName = "PSDscResources";
+ SourceInfo = "::6::5::Environment";
+ Name = "MC_ENV_EXAMPLE";
+ ConfigurationName = "MyConfig";
+};
+instance of MSFT_WindowsFeature as $MSFT_WindowsFeature1ref
+{
+Ensure = "Present";
+ ResourceID = "[WindowsFeature]WebServer";
+ ModuleVersion = "2.12.0.0";
+ ModuleName = "PSDscResources";
+ SourceInfo = "::13::9::WindowsFeature";
+ Name = "Web-Server";
+ ConfigurationName = "MyConfig";
+};
+instance of OMI_ConfigurationDocument
+
+                    {
+ Version="2.0.0";
+
+                        MinimumCompatibleVersion = "1.0.0";
+
+                        CompatibleVersionAdditionalProperties= {"Omi_BaseResource:ConfigurationName"};
+
+                        Author="dkuff";
+
+                        GenerationDate="10/29/2025 19:12:24";
+
+                        GenerationHost="W0";
+
+                        Name="MyConfig";
+
+                    };
